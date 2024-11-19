@@ -1,18 +1,15 @@
-import { Country, Department, Employee, Status } from "../../types";
+import { Employee } from "../../types";
 import "./style.css";
 
 interface Props {
   users: Employee[] | undefined;
-  departments: Department[] | undefined;
-  countries: Country[] | undefined;
-  statuses: Status[] | undefined;
+  // departments: Department[] | undefined;
+  // countries: Country[] | undefined;
+  // statuses: Status[] | undefined;
 }
 
 export const Users: React.FC<Props> = ({
   users,
-  departments,
-  countries,
-  statuses,
 }) => {
   return (
     <div className="users">
