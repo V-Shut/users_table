@@ -104,7 +104,56 @@ td {
 }
 
 .delete_user {
-  margin-top: 21px;
   border: none;
   background-color: transparent;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.dropdown_button {
+  width: 220px;
+  height: 48px;
+  text-align: start;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdown_button:focus + .dropdown_menu,
+.dropdown:hover .dropdown_menu {
+  display: block;
+}
+
+.dropdown_item {
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  height: 24px;
+  aspect-ratio: 1/1;
+  margin: 10px;
+}
+
+.checkbox:checked {
+  background-color: black;
 }

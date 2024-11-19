@@ -87,3 +87,9 @@ select {
 .save {
   width: 200px;
 }
+
+.change_name {
+  width: 500px;
+  height: 48px;
+  border: 1px solid #E3E8EE;
+}

@@ -1,0 +1,85 @@
+.tab_background {
+  top: 88px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  background-color: #7D7D7D80;
+  z-index: 11;
+}
+
+.user_tab {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 720px;
+  height: 444px;
+  background-color: white;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new_user_head {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 6px;
+  margin: 40px 0 0;
+}
+
+.new_user_param {
+  width: 280px;
+  margin: 0 0 4px;
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color:#5E626B;
+}
+
+.param_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px 40px;
+  width: 600px;
+  height: 164px;
+  margin-top: 60px;
+}
+
+.form_params {
+  width: 280px;
+  height: 48px;
+  border: 1px solid #E3E8EE;
+  box-sizing: border-box;
+}
+
+.buttons_container {
+  width: 600px; 
+  height: 48px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+
+.new_add {
+  width: 150px;
+  height: 48px;
+}
+
+.cancel {
+  width: 100px;
+  height: 48px;
+}
+
