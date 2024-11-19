@@ -199,8 +199,7 @@ export const Users: React.FC<Props> = ({ users, setUsers }) => {
                       setUsers(
                         users?.filter(
                           (person) =>
-                            person.name !== user.name &&
-                            person.department.name !== user.department.name
+                            person.name !== user.name
                         )
                       )
                     }
