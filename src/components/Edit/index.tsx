@@ -113,10 +113,8 @@ export const EditPage: React.FC<Props> = ({ users, setUsers }) => {
         choosedUser.status?.name !== selectedStatus?.name)
     ) {
       setCheckChanges(true);
-      console.log(true);
     } else {
       setCheckChanges(false);
-      console.log(false);
     }
   }, [
     inputText,
