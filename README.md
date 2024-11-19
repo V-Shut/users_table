@@ -1,1 +1,1 @@
-[DEMO](https://vercel.com/v-shuts-projects/users-table)
+[DEMO](https://users-table-dusky.vercel.app/)
