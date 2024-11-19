@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Header } from "./components/Header";
+import { EditPage } from "./components/Edit";
+import { Users } from "./components/Users";
+import { useEffect, useState } from "react";
+import countryList from "./data/countries.json";
+import departmentsList from "./data/departments.json";
+import statusesList from "./data/statuses.json";
+import usersList from "./data/users.json";
+import { Country, Department, Employee, Status } from "./types";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [users, setUsers] = useState<Employee[] | undefined>(undefined);
+  const [departments, setDepartments] = useState<Department[] | undefined>(undefined);
+  const [countries, setCountries] = useState<Country[] | undefined>(undefined);
+  const [statuses, setStatuses] = useState<Status[] | undefined>(undefined);
+
+  useEffect(() => {
+    setUsers(usersList);
+    setDepartments(departmentsList);
+    setCountries(countryList);
+    setStatuses(statusesList);
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<EditPage />} />
+        <Route path="/users" element={<Users users={users}/>} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

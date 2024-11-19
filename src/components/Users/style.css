@@ -1,0 +1,110 @@
+:root {
+  --border-color: #C4C4C4;
+  --font-color: #1B2438;
+}
+
+.users {
+  width: 1240px;
+  border: 1px solid black;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.users_head {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 6px;
+  margin: 60px 0 40px;
+}
+
+.instructions {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: #1B2438;
+  margin: 0 0 12px;
+}
+
+.params {
+  width: 1080px;
+  display: flex;
+  flex-direction: column;
+}
+
+.params_select {
+  width: 220px;
+  margin-right: 12px;
+}
+
+.params_select:last-child {
+  margin-right: 20px;
+}
+
+.delete {
+  height: 48px;
+  aspect-ratio: 1/1;
+  background-color: white;
+  border: 1px solid var(--border-color);
+}
+
+.add {
+  margin-left: auto;
+  font-size: 14px;
+  line-height: 20px;
+  width: 150px;
+}
+
+.params_container {
+  display: flex;
+}
+
+.users_table {
+  width: 1080px;
+  border: 1px solid var(--border-color);
+  margin: 40px 0 60px;
+  border-collapse: collapse;
+}
+
+tr {
+  height: 76px;
+}
+
+th {
+  text-align: start;
+  padding-left: 36px;
+}
+
+td {
+  padding-left: 36px;
+}
+
+.table_head {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.line {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: #5E626B;
+}
+
+.name {
+  color: var(--font-color);
+  font-weight: 400;
+}
+
+.delete_user {
+  margin-top: 21px;
+  border: none;
+  background-color: transparent;
+}
